@@ -1,3 +1,3 @@
 yum_package 'git' do
-  action: install
+  action :install
 end
