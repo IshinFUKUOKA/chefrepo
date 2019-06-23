@@ -1,0 +1,86 @@
+{
+  "all_files": [
+    {
+      "name": "root_files/LICENSE",
+      "path": "LICENSE",
+      "checksum": "1d1c9ae2289377a52e9dcec0a6d255b6",
+      "specificity": "default"
+    },
+    {
+      "name": "root_files/README.md",
+      "path": "README.md",
+      "checksum": "4648bb42a10cc70da29859b320d73ad1",
+      "specificity": "default"
+    },
+    {
+      "name": "recipes/default.rb",
+      "path": "recipes/default.rb",
+      "checksum": "31a86b713644258f94790ae7702ccf0c",
+      "specificity": "default"
+    },
+    {
+      "name": "recipes/git.rb",
+      "path": "recipes/git.rb",
+      "checksum": "f072aceae52baaafec57006f8e8e251a",
+      "specificity": "default"
+    },
+    {
+      "name": "root_files/metadata.rb",
+      "path": "metadata.rb",
+      "checksum": "44935b6234f7f96de4e15a9c65f3cc8b",
+      "specificity": "default"
+    },
+    {
+      "name": "root_files/chefignore",
+      "path": "chefignore",
+      "checksum": "d14d45c195dccbfe56b358b71d2a6a6b",
+      "specificity": "default"
+    }
+  ],
+  "metadata": {
+    "name": "home_ope",
+    "description": "Installs/Configures home_ope",
+    "long_description": "Installs/Configures home_ope",
+    "maintainer": "The Authors",
+    "maintainer_email": "you@example.com",
+    "license": "All Rights Reserved",
+    "platforms": {
+
+    },
+    "dependencies": {
+
+    },
+    "providing": {
+      "home_ope": ">= 0.0.0",
+      "home_ope::git": ">= 0.0.0"
+    },
+    "attributes": {
+
+    },
+    "recipes": {
+      "home_ope": "",
+      "home_ope::git": ""
+    },
+    "version": "0.1.0",
+    "source_url": "",
+    "issues_url": "",
+    "privacy": false,
+    "chef_versions": [
+      [
+        ">= 12.14"
+      ]
+    ],
+    "ohai_versions": [
+
+    ],
+    "gems": [
+
+    ]
+  },
+  "version": "0.1.0",
+  "name": "home_ope-0.1.0",
+  "cookbook_name": "home_ope",
+  "frozen?": false,
+  "chef_type": "cookbook_version",
+  "json_class": "Chef::CookbookVersion"
+}
