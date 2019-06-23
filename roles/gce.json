@@ -1,0 +1,37 @@
+{
+  "name": "gce",
+  "description": "GCE用の初期設定ロール",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "sshd": {
+      "sshd_config": { // GCEサーバーのSSHD設定
+        "Port": 12022,
+        "HostKey": ["/etc/ssh/ssh_host_rsa_key", "/etc/ssh/ssh_host_ecdsa_key", "/etc/ssh/ssh_host_ed25519_key"] ,
+        "SyslogFacility": "AUTHPRIV",
+        "PermitRootLogin": "no",
+        "AuthorizedKeysFile":  ".ssh/authorized_keys",
+        "PasswordAuthentication": "no",
+        "ChallengeResponseAuthentication": "no",
+        "GSSAPIAuthentication": "yes",
+        "GSSAPICleanupCredentials": "no",
+        "UsePAM": "yes",
+        "X11Forwarding": "yes",
+        "ClientAliveInterval": 420,
+        "AcceptEnv": ["LANG LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE LC_MONETARY LC_MESSAGES", "LC_PAPER LC_NAME LC_ADDRESS LC_TELEPHONE LC_MEASUREMENT", "LC_PAPER LC_NAME LC_ADDRESS LC_TELEPHONE LC_MEASUREMENT", "LC_IDENTIFICATION LC_ALL LANGUAGE", "XMODIFIERS"],
+        "Subsystem": "sftp /usr/libexec/openssh/sftp-server"
+      }
+    }
+  },
+  "override_attributes": {
+
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[home_ope::selinux_config]",
+    "recipe[sshd::default]",
+    "role[development]"
+  ],
+  "env_run_lists": {
+
+  }
+}
