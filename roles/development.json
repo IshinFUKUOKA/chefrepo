@@ -10,7 +10,8 @@
   },
   "chef_type": "role",
   "run_list": [
-    "recipe[home_ope::git]"
+    "recipe[home_ope::git]",
+    "recipe[home_ope::docker]"
   ],
   "env_run_lists": {
 
